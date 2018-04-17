@@ -11,4 +11,9 @@ attr_reader :name
     return @stomach_contents.count()
   end
 
+ def fish_in_stomach(fish)
+   @stomach_contents << fish
+ end
+
+
 end
