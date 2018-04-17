@@ -4,7 +4,7 @@ attr_reader :name
 
   def initialize(name)
     @name = name
-    @number_of_fish = [1]
+    @number_of_fish = []
   end
 
 
@@ -13,8 +13,13 @@ attr_reader :name
    end
 
 
-   def loose_fish(number)
-     @number_of_fish.shift()
+    def add_fish(fish)
+      @number_of_fish << fish
+    end
+
+   def remove_fish(fish)
+     index = @number_of_fish.index(fish)
+     @number_of_fish.slice!(index, 1)
    end
 
 end
